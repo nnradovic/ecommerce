@@ -19,7 +19,7 @@ exports.create = (req, res) => {
     category.save((err, data) => {
         if (err) {
             return res.status(400).json({
-                error: errorHAndler(err)
+                error: 'Error creating category'
             })
         }
         res.json({
@@ -65,7 +65,7 @@ exports.list = (req, res) => {
     Category.find().exec((err, data) => {
         if (err) {
             return res.status(400).json({
-                error: errorHandler(err)
+                error: 'Error creating category'
             })
         }
         res.json(data)
